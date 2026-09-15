@@ -1,0 +1,11 @@
+node_modules/
+.next/
+out/
+
+# Extracted text of the source exercise PDFs, used while authoring
+.source-text/
+
+# Produced by `bun run pdf`
+BISA-Exam-Guide.pdf
+
+.DS_Store

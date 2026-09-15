@@ -1,0 +1,26 @@
+{
+  "name": "bisa-exam-guide",
+  "version": "1.0.0",
+  "private": true,
+  "description": "BISA / Introduction to Python exam preparation guide — a book-style web app with full PDF export",
+  "scripts": {
+    "dev": "next dev -p 3210",
+    "build": "next build",
+    "start": "next start -p 3210",
+    "pdf": "bun run scripts/build-pdf.mjs",
+    "check": "bun run scripts/validate-content.mjs && bun run scripts/check-paths.mjs",
+    "verify": "python3 scripts/verify_outputs.py"
+  },
+  "dependencies": {
+    "highlight.js": "^11.10.0",
+    "js-yaml": "^4.1.0",
+    "marked": "^14.1.3",
+    "marked-highlight": "^2.1.4",
+    "next": "^15.1.6",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  },
+  "devDependencies": {
+    "puppeteer-core": "^23.11.1"
+  }
+}
