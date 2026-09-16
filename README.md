@@ -7,6 +7,10 @@ before being published.
 
 16 chapters · 231 patterns · ~242,000 words · 69 rendered figures · 1,100+ pages as a PDF.
 
+**Companion site:** [bisa-exercise-answers](https://github.com/rythmn1111/bisa-exercise-answers)
+— the same exercise bank as a flat question-and-answer list (330 questions), for when you want the
+answer rather than the explanation.
+
 ## Provenance and intended use
 
 This is a **student's study guide**, written for personal exam revision.
@@ -70,6 +74,8 @@ book/
   public/figures/*.png   rendered Matplotlib answers
   scripts/
     validate-content.mjs structural checks on every chapter
+    check-paths.mjs      resolves every data path and sheet name
+    verify_outputs.py    re-executes the book's code, diffs the output
     build-pdf.mjs        CLI PDF build
   AUTHORING_SPEC.md      the contract every chapter file follows
   customers.csv          fixture — chapter 05 demonstrates a *relative* read
@@ -125,7 +131,7 @@ bun run verify    # re-runs the book's code and diffs the pasted output
   names.
 - `verify_outputs.py` — extracts the ` ```python ` blocks per chapter, executes them in order in
   one namespace, and byte-compares stdout against the following ` ```text ` block. Currently
-  **927 of 1,031 code/output pairs (89.9%) reproduce**.
+  **931 of 1,032 code/output pairs (90.2%) reproduce**.
 
   Blocks labelled `**Template**` hold placeholders (`COL`, `VALUE`) and are skipped. The residual
   mismatches are mostly harness limitations rather than content errors: chapters that reuse a
