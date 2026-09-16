@@ -1102,7 +1102,7 @@ print("r(Credit Limit, Total Spend) =", round(cc['Credit Limit'].corr(cc['Total 
 
 plt.figure(figsize=(9, 6))
 plt.scatter(cc['Credit Limit'], cc['Total Spend'],
-            s=cc['Number of Transactions'],          # already 0-60ish, no divisor needed
+            s=cc['Number of Transactions'],          # 4 to 197, usable as areas without a divisor
             alpha=0.6, color='#4C72B0', edgecolors='black', linewidths=0.4)
 plt.title('Credit Limit vs Total Spend (size = number of transactions)')
 plt.xlabel('Credit Limit (USD)'); plt.ylabel('Total Spend (USD)')
